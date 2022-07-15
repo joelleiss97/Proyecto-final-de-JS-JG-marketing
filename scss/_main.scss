@@ -1,3 +1,4 @@
+
 .about{
     text-align: center;
 
@@ -7,8 +8,10 @@
     font-size: 2rem;
     margin-bottom: 30px;
 }
-.about__paragrah{
+.about__paragrah {
     line-height: 1.7;
+    font-size: 30px;
+    color: #fff;
 }
 .about__main{
     padding-top: 80px;
@@ -23,7 +26,7 @@
     display: grid;
     gap: 1em;
     justify-items: center;
-    width: 260px;
+    width: 100%;
     overflow: hidden;
     margin: auto;
 }
@@ -52,57 +55,78 @@
 .conociendo__paragraph{
     line-height: 1.7;
     margin-bottom: 20px;
+    color: black solid;
 }
 .conociendo__img{
     width: 100%;
     display: block;
 }
+//----footer---
 
-//testimonios
-
-.testimony{
-    background-color: #e5e5f7;
+.footer{
+    width: 100%;
+    background-color: #1f4f74;
 }
-.testimony__container{
+.footer .footer__seccionA{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
-    gap: 1em;
-    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 40px 0px;
 }
-.testimony__body{
-    display: grid;
-    grid-template-columns: 1fr max-content;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2em;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    opacity: 0;
-    pointer-events: none;
 
+.footer .footer__seccionA .box  p{
+    color: #efefef;
+    margin-bottom: 10px;
+
+   
+    font-size: 20px;
 }
-.testimony__body--show{
-    pointer-events: unset;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+.footer .footer__seccionA .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
 }
-.testimony__course{
-    background-color: royalblue;
-    color: $color-principal;
+.footer .footer__seccionA .red_social a{
     display: inline-block;
-    padding: 5px;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    margin-right: 10px;
+    background-color: #0d2033;
+    text-align: center;
+    align-items: center;
+    transition: all 200ms ease;
+    font-size: 35px;
+    border-radius: 8px;
+    margin-left: 10px;
 }
-.testimony__img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: 50% 30%;
+.footer .footer__seccionA .red_social a:hover{
+    color: aqua;
 }
-.testimony__texts{
-    max-width: 700px;
+.footer .footer__seccionB{
+    background-color: #0a1a2a;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
 }
-.testimony__arrow{
-    width: 90%;
-    cursor: pointer;
+.footer .footer__seccionB small{
+    font-size: 20px;
+}
+// responsivo---
+
+@media screen and (max-width:800px){
+    .footer .footer__seccionA{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .title{
+        font-size: 40px;
+    }
 }
